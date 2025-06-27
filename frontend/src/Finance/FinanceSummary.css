@@ -1,0 +1,152 @@
+.summary-content-area {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.summary-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.summary-btn-light,
+.summary-btn-dark {
+  border: none;
+  padding: 9px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.summary-btn-light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+
+.summary-btn-dark {
+  background-color: #1c1c2e;
+  color: white;
+}
+
+.summary-search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.summary-search-icon {
+  position: absolute;
+  left: 10px;
+  color: #555;
+}
+
+.summary-search-input {
+  padding: 9px 10px 9px 32px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  width: 200px;
+}
+
+.summary-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* ───────────────────────── Table Layout ───────────────────────── */
+.summary-table-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.summary-table-header {
+  display: flex;
+  background-color: #1d1c2e;
+  color: white;
+  padding: 12px 20px;
+  font-weight: 600;
+  font-size: 14px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Table Body */
+.summary-table-body {
+  max-height: 360px;
+  overflow-y: auto;
+  padding: 0 4px 4px 0;
+  scroll-behavior: smooth;
+}
+
+.summary-table-body::-webkit-scrollbar {
+  width: 6px;
+}
+.summary-table-body::-webkit-scrollbar-thumb {
+  background: #aaa;
+  border-radius: 3px;
+}
+
+/* Table Rows */
+.summary-table-row {
+  display: flex;
+  align-items: center;
+  background-color: #f4f4f4;
+  margin-bottom: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.summary-table-row:hover {
+  background-color: #e8e8e8;
+}
+
+/* Column widths */
+.summary-col {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.icon-col {
+  width: 60px;
+  justify-content: center;
+  margin-right: 30px;
+}
+
+.title-col {
+  flex: 2;
+}
+
+.type-col {
+  flex: 1.5;
+}
+
+.date-col {
+  flex: 1.2;
+}
+
+.amount-col {
+  flex: 1.2;
+  justify-content: flex-end;
+}
+
+/* Image */
+.summary-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}

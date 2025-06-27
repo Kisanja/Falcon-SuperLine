@@ -1,0 +1,191 @@
+/* Routes Table Container */
+/* Updated Table Container with Scroll */
+.falcon-routes-container {
+  max-height: 520px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Styling */
+.falcon-routes-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* ← changed from 6 to 7 */
+  background-color: #1c1c2c;
+  color: white;
+  padding: 14px 16px;
+  font-weight: 600;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.falcon-route-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* ← changed from 6 to 7 */
+  background-color: #f9f9f9;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+
+.falcon-route-row:hover {
+  background-color: #f1f1f1;
+}
+
+/* Action Buttons */
+.falcon-edit-btn,
+.falcon-delete-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.falcon-edit-btn i {
+  color: #007bff;
+}
+
+.falcon-delete-btn i {
+  color: #dc3545;
+}
+
+
+/* Modal Backdrop */
+.falcon-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal Box */
+.falcon-modal {
+  background-color: white;
+  padding: 24px;
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Content */
+.modal-title {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #1c1c2c;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Form Inputs */
+.falcon-input {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.falcon-label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+/* Dialog Overlay */
+.falcon-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+
+/* Dialog Box */
+.falcon-dialog-box {
+  background: white;
+  border-radius: 10px;
+  width: 360px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.25s ease-in-out;
+  position: relative;
+}
+
+.falcon-dialog-box.success {
+  border-top: 6px solid #28a745;
+}
+
+.falcon-dialog-box.error {
+  border-top: 6px solid #dc3545;
+}
+
+/* Dialog Header */
+.dialog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.dialog-close {
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Dialog Body */
+.dialog-body {
+  font-size: 15px;
+  margin: 15px 0;
+  color: #444;
+}
+
+/* Dialog Footer */
+.dialog-footer {
+  text-align: right;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

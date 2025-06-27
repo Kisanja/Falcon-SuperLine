@@ -1,0 +1,58 @@
+.sidebar {
+  width: 200px;
+  background-color: #1c1c2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  padding: 20px 10px;
+}
+
+.sidebar-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Custom sidebar buttons */
+.custom-btn {
+  display: block;
+  text-decoration: none;      /* Remove underline */
+  text-align: center;
+  background-color: #334155;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  background-color: #475569;
+}
+
+
+.custom-btn.active {
+  background-color: #0d6efd;
+  font-weight: bold;
+}
+
+/* Logout button */
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #bb2d3b;
+}

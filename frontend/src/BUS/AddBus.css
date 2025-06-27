@@ -1,0 +1,190 @@
+/* Uniform button styling */
+.bus-btn {
+  background-color: #1c1c2e;
+  color: white;
+  border: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  min-width: 120px;
+  text-align: center;
+}
+
+.bus-btn1 {
+  background-color: #1c1c2e;
+  color: white;
+  border: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: 0.2s ease;
+  min-width: 180px;
+  text-align: center;
+}
+
+/* Search input styling */
+.search-wrapper {
+  position: relative;
+}
+
+.bus-search-input {
+  padding: 6px 12px 6px 32px;
+  border-radius: 6px;
+  border: 1.5px solid #1c1c2e;
+  outline: none;
+  width: 180px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #1c1c2e;
+}
+
+/* Scrollable Table Styling */
+.bus-table-wrapper {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bus-table-header {
+  display: flex;
+  background-color: #1c1c2e;
+  color: white;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding: 12px 24px;
+}
+
+.bus-table-body {
+  max-height: 470px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+.bus-row {
+  display: flex;
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 24px;
+  transition: background-color 0.2s ease;
+}
+
+.bus-row:hover {
+  background-color: #eaeaea;
+}
+
+/* Columns */
+.bus-col {
+  flex: 1;
+  align-items: center;
+  display: flex;
+  word-break: break-word;
+  padding-right: 10px;
+}
+
+.bus-col.image {
+  width: 80px;
+  justify-content: center;
+}
+
+.bus-col.action {
+  justify-content: center;
+  width: 120px;
+}
+
+/* Image with Hover Zoom */
+.bus-img-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.bus-img-icon:hover {
+  transform: scale(2.6);
+  z-index: 10;
+  position: relative;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Icons */
+.action-icon {
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.action-icon1 {
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 8px;
+  margin-left: 16px;
+}
+
+/* Modal Customization */
+.custom-modal .modal-dialog {
+  max-width: 700px;
+}
+
+.custom-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-modal .modal-body {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 1.5rem;
+  border-top: 1px solid #dee2e6;
+  border-bottom: 1px solid #dee2e6;
+  scrollbar-width: thin;
+}
+
+.custom-modal .modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-modal .modal-body::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 4px;
+}
+
+/* Optional smooth scrollbar for table */
+.bus-table-body::-webkit-scrollbar {
+  width: 8px;
+}
+.bus-table-body::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+.bus-table-body::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+
+.bus-filter-select {
+  background-color: white;
+  color: black;
+  border-color:#888;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  min-width: 160px;
+  cursor: pointer;
+}
+.bus-filter-select option {
+  color: black;
+  background-color: white;
+}

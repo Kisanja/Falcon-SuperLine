@@ -1,0 +1,83 @@
+/* Full-height layout */
+.employeeRegister {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Sidebar + Content */
+.main-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Right content area */
+.flex-grow-1 {
+  flex-grow: 1;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 20px;
+}
+
+/* Title */
+.employee-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* Table styling */
+.employee-table-wrapper {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table thead {
+  background-color: #1a1a2e;
+  color: white;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 16px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Row body styling */
+.employee-scrollable-body {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.employee-scrollable-body tr {
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Avatar image */
+.employee-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* Assign buttons */
+.assign-btn {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0;
+}
+
+.assign-btn:hover {
+  text-decoration: underline;
+}

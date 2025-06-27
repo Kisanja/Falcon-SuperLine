@@ -1,0 +1,117 @@
+.custom-table-container {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+/* Shared header and body styles */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 14px;
+}
+
+.custom-table thead {
+  background-color: #1c1c2c;
+  color: white;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #dee2e6;
+  padding: 12px 10px;
+  text-align: left;
+}
+
+/* Scrollable tbody section */
+.custom-scroll-body {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.custom-scroll-body table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* Fix misalignment: equal widths */
+.custom-table th:nth-child(1),
+.custom-scroll-body td:nth-child(1) {
+  width: 25%;
+}
+.custom-table th:nth-child(2),
+.custom-scroll-body td:nth-child(2) {
+  width: 25%;
+}
+.custom-table th:nth-child(3),
+.custom-scroll-body td:nth-child(3) {
+  width: 30%;
+}
+.custom-table th:nth-child(4),
+.custom-scroll-body td:nth-child(4) {
+  width: 20%;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.no-data {
+  text-align: center;
+  font-style: italic;
+  color: gray;
+  padding: 20px;
+}
+
+/* Action Buttons */
+.action-btn1 {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.edit-btn1 {
+  color: #007BFF;
+  margin-left: 8px;
+}
+
+.delete-btn1 {
+  color: #dc3545;
+}
+
+/* Highlight the whole row if expiring this month */
+.row-expiring {
+  background-color: #ffe5e5 !important; /* Light red background */
+}
+
+.row-expiring td {
+  font-weight: bold;
+  color: #b30000; /* Dark red text */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px 24px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+

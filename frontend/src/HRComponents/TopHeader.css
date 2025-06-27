@@ -1,0 +1,15 @@
+.top-header {
+  background-color: #1E1E2F;
+  color: white;
+  height: 60px;
+}
+
+.logo-img {
+  margin-top: 15px;
+  margin-left: 34px;
+  height: 65px;
+}
+
+.company-name-img {
+  height: 60px;
+}

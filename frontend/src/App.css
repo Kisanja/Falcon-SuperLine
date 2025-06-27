@@ -1,0 +1,12 @@
+/* Make full app occupy the viewport */
+.App {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* This container holds sidebar + main content */
+.main-container {
+  display: flex;
+  height: calc(100vh - 61px); /* subtract top header height */
+  overflow: hidden;
+}
