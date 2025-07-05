@@ -34,7 +34,7 @@ const BusSummary = () => {
       <div className="main-container d-flex">
         <SideBarBus />
 
-        <div className="bus_container flex-grow-1 p-4">
+        <div className="flex-grow-1 p-4">
           {/* 🔍 Search + Download */}
           <div className="d-flex justify-content-end align-items-center  flex-wrap mb-4">
             <div className="input-group bus-summary-search" style={{ maxWidth: '260px' }}>

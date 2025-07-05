@@ -12,7 +12,7 @@
 /* Header Styling */
 .falcon-routes-header {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* ← changed from 6 to 7 */
+  grid-template-columns: repeat(8, 1fr); 
   background-color: #1c1c2c;
   color: white;
   padding: 14px 16px;
@@ -26,7 +26,7 @@
 
 .falcon-route-row {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* ← changed from 6 to 7 */
+  grid-template-columns: repeat(8, 1fr); /* ← changed from 6 to 7 */
   background-color: #f9f9f9;
   padding: 12px 16px;
   border-bottom: 1px solid #eee;

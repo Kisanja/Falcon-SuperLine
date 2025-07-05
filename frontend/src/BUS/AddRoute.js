@@ -171,6 +171,11 @@ const handleSecondaryTownChange = (e) => {
   setSecondaryTown(value);
 };
 
+ const routeIcons = {
+  'Long Distance': '/icons/square-l.png',
+  'Short Distance': '/icons/square-s.png',
+  'Highway Express': '/icons/h-square.png',
+};
 
   return (
     <div>
@@ -221,6 +226,7 @@ const handleSecondaryTownChange = (e) => {
 
           <div className="falcon-routes-container">
             <div className="falcon-routes-header">
+              <div>Icon</div>
               <div>Route Number</div>
               <div>Permit Number</div>
               <div>Main Town</div>
@@ -233,6 +239,7 @@ const handleSecondaryTownChange = (e) => {
             <div className="falcon-routes-body-scroll">
               {filteredRoutes.map((route) => (
                 <div className="falcon-route-row" key={route._id}>
+                  <img src={routeIcons[route.routeType] || '/icons/default.png'} alt='icon' className='income-icon-img' />
                   <div>{route.routeNumber}</div>
                   <div>{route.permitNumber}</div>
                   <div>{route.mainTown}</div>

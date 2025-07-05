@@ -8,6 +8,8 @@ const busRoutes = require('./routes/busRoutes');
 const routeRoutes = require('./routes/routeRoutes');
 const assignmentRoutes = require('./routes/assignmentRoutes');
 const financeRoutes = require('./routes/financeRoutes');
+const customerRoutes = require('./routes/customerRoutes');
+const bookingRoutes = require('./routes/bookingRoutes');
 
 require('dotenv').config();
 
@@ -29,6 +31,8 @@ app.use('/api/buses', busRoutes);
 app.use('/api/routes', routeRoutes);
 app.use('/api/assignments', assignmentRoutes);
 app.use('/api/finance', financeRoutes);
+app.use('/api/customers', customerRoutes);
+app.use('/api/bookings', bookingRoutes);
 
 // Root test route
 app.get('/', (req, res) => {

@@ -1,0 +1,163 @@
+.hero-img {
+  height: 92vh;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+.custom-carousel {
+  margin-top: 60px; /* offset for fixed header */
+}
+
+.custom-carousel .carousel-control-prev-icon,
+.custom-carousel .carousel-control-next-icon {
+  background-color: #1c1c1c; /* Brand color */
+  border-radius: 50%;
+  padding: 20px;
+  background-size: 50% 50%;
+}
+
+.custom-carousel .carousel-control-prev-icon:hover,
+.custom-carousel .carousel-control-next-icon:hover {
+  background-color: #212529;
+}
+
+.company-profile h3 {
+  font-weight: 600;
+}
+
+.company-profile ul li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.popular-designations {
+  background-color: #1c1c2c;
+  color: white;
+  padding-bottom: 60px;
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.destination-card:hover {
+  transform: scale(1.03);
+}
+
+.destination-image-wrapper {
+  position: relative;
+}
+
+.route-overlay {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  font-weight: 600;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.route-overlay span {
+  color: red;
+}
+
+.destination-card img {
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #1a73e8;
+  font-weight: bold;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 12px;
+  margin-left: 20px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.swiper-container-wrapper {
+  position: relative;
+  padding: 0 40px;
+}
+
+.swiper-button-prev-custom,
+.swiper-button-next-custom {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 28px;
+  color: white;
+  background-color: #1a73e8;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-button-prev-custom:hover,
+.swiper-button-next-custom:hover {
+  background-color: #155cc1;
+}
+
+.swiper-button-prev-custom {
+  left: -20px;
+}
+
+.swiper-button-next-custom {
+  right: -20px;
+}
+
+.about-us-section {
+  background-color: #f8f9fa;
+}
+
+.about-us-section h3 {
+  font-weight: 600;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.mission-vision-section {
+  background-color: #1c1c2c;
+  color: white;
+}
+
+.mission-vision-section h5 {
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+.why-falcon-section {
+  background-color: #ffffff;
+}
+
+.why-card {
+  background-color: #f8f9fa;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}

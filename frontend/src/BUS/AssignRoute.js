@@ -40,6 +40,7 @@ const AssignRoute = () => {
   const [popupType, setPopupType] = useState('success'); // or 'error'
   const [selectedAssignment, setSelectedAssignment] = useState(null);
   const [viewModalOpen, setViewModalOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
 useEffect(() => {
   axios.get('http://localhost:5000/api/assignments/assigned')
@@ -49,13 +50,15 @@ useEffect(() => {
 
  useEffect(() => {
   axios
-    .get('http://localhost:5000/api/assignments/unassigned-buses')
+    .get('http://localhost:5000/api/buses')
     .then((res) => setBusList(res.data))
     .catch((err) => console.error('Failed to fetch unassigned buses:', err));
 }, []);
 
 useEffect(() => {
-  axios.get('http://localhost:5000/api/assignments/unassigned-routes')
+  // Get all routes (assigned and unassigned)
+axios.get('http://localhost:5000/api/routes')
+
     .then(res => setRoutes(res.data))
     .catch(err => console.error('Failed to fetch unassigned routes:', err));
 }, []);
@@ -119,6 +122,25 @@ const handleRemoveAssignment = async (id) => {
   }
 };
 
+const filteredBusList = busList.filter(bus =>
+  bus.busNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  bus.model.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  bus.brand.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+const filteredRoutes = routes.filter(route =>
+  route.routeNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  route.permitNumber.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  route.mainTown.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  route.secondaryTown.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+const filteredAssignedList = assignedList.filter(item =>
+  item.busId?.busNumber?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+  item.routeId?.permitNumber?.toLowerCase().includes(searchQuery.toLowerCase())
+);
+
+
   return (
     <div className="employeeRegister">
       <TopHeader />
@@ -135,7 +157,14 @@ const handleRemoveAssignment = async (id) => {
 
             <div className="assign-search-box d-flex align-items-center px-3 py-2 rounded">
               <FaSearch className="me-2" />
-              <input type="text" className="form-control border-0 p-0" placeholder="Search Bus or Route" style={{ boxShadow: 'none', background: 'transparent' }} />
+              <input
+                type="text"
+                className="form-control border-0 p-0"
+                placeholder="Search Bus or Route"
+                style={{ boxShadow: 'none', background: 'transparent' }}
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
             </div>
           </div>
 
@@ -178,7 +207,7 @@ const handleRemoveAssignment = async (id) => {
                       <col style={{ width: '17%' }} />
                     </colgroup>
                     <tbody>
-                      {busList.map((bus, index) => (
+                      {filteredBusList.map((bus, index) => (
                         <tr key={index} className="assign-route-row">
                           <td>
                             <img
@@ -244,7 +273,7 @@ const handleRemoveAssignment = async (id) => {
                       <col style={{ width: '14%' }} />
                     </colgroup>
                     <tbody>
-  {routes.map((route, index) => (
+  {filteredRoutes.map((route, index) => (
     <tr key={index} className="assign-bus-row">
       <td>{route.routeNumber}</td>
       <td>{route.permitNumber}</td>
@@ -307,7 +336,7 @@ const handleRemoveAssignment = async (id) => {
           <col style={{ width: '15%' }} />
         </colgroup>
         <tbody>
-  {assignedList.map((item, index) => (
+  {filteredAssignedList.map((item, index) => (
     <tr key={index} className="assigned-list-row">
       <td>{item.busId?.busNumber || '-'}</td>
       <td>{item.routeId?.permitNumber || '-'}</td>

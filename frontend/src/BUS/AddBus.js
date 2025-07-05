@@ -269,7 +269,7 @@ const handleUpdateBus = async () => {
           <Container fluid className="mb-4">
             <Row className="align-items-center justify-content-between">
               <Col xs="auto">
-                <Button className="bus-btn" variant="dark" onClick={handleShow}>
+                <Button className="btn btn-dark px-4"  onClick={handleShow}> 
                   <FaPlus className="me-2" /> Add Bus
                 </Button>
               </Col>
@@ -417,7 +417,7 @@ const handleUpdateBus = async () => {
                     isInvalid={!!errors.seatCapacity}
                   >
                     <option value="">Select Seat Capacity</option>
-                    <option value="30">30</option>
+                    <option value="33">33</option>
                     <option value="44">44</option>
                     <option value="49">49</option>
                     <option value="54">54</option>

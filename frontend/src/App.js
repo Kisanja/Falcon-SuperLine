@@ -11,13 +11,27 @@ import Income from './Finance/income';
 import Expenses from './Finance/Expenses';
 import FinanceSummary from './Finance/FinanceSummary';
 import FinanceDashboard from './Finance/FinanceDashboard';
+import Dashboard from './Customer/Dashboard';
+import CustomerGallery from './Customer/CustomerGallery';
+import DisplayBus from './Customer/DisplayBus';
+import BookSeat from './Customer/BookSeat';
+import Login from './Login/Login';
+import Register from './Login/Register';
+import MyProfile from './Customer/MyProfile';
+import PaymentPage from './Customer/PaymentPage';
+import MyBooking from './Customer/MyBooking';
+import Support from './Customer/Support';
+import CustomerProtectedRoute from './Customer/CustomerProtectedRoute';
 
 function App() {
   return (
     <Router>
       <Routes>
+
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
         {/* HR Management Routes */}
-        <Route path="/" element={<EmployeeRegister />} /> {/* Default route */}
         <Route path="/add-employee" element={<EmployeeRegister />} />
 
         {/* Bus Manager Routes */}
@@ -32,7 +46,47 @@ function App() {
         <Route path="/add-income" element={<Income />} />
         <Route path="/add-expenses" element={<Expenses />} />
         <Route path="/finance-summary" element={<FinanceSummary />} />
-         <Route path="/finance-dashboard" element={<FinanceDashboard />} />
+        <Route path="/finance-dashboard" element={<FinanceDashboard />} />
+
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/customer/gallery" element={<CustomerGallery />} />
+        <Route path="/customer/book-ticket" element={<DisplayBus />} />
+        <Route path="/customer/support" element={<Support />} />
+
+        {/* ✅ Protected Routes */}
+        <Route
+          path="/book-seat/:id"
+          element={
+            <CustomerProtectedRoute>
+              <BookSeat />
+            </CustomerProtectedRoute>
+          }
+        />
+        <Route
+          path="/customer/profile"
+          element={
+            <CustomerProtectedRoute>
+              <MyProfile />
+            </CustomerProtectedRoute>
+          }
+        />
+        <Route
+          path="/payment"
+          element={
+            <CustomerProtectedRoute>
+              <PaymentPage />
+            </CustomerProtectedRoute>
+          }
+        />
+        <Route
+          path="/customer/my-bookings"
+          element={
+            <CustomerProtectedRoute>
+              <MyBooking />
+            </CustomerProtectedRoute>
+          }
+        />
+
       </Routes>
     </Router>
   );

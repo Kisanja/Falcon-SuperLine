@@ -1,0 +1,22 @@
+.nav-link {
+  color: #ffffff !important;
+  transition: color 0.2s;
+}
+
+.nav-link.active {
+  color: #1a73e8 !important; /* Blue on active */
+  font-weight: 600;
+}
+
+.custom-header {
+  background-color: #1c1c2c !important;
+  height: 60px;
+}
+
+.custom-header {
+  background-color: #1c1c2c !important;
+  height: 60px;
+  z-index: 1050; /* 🛡️ Make sure it stays above everything */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* optional shadow */
+}
+

@@ -1,0 +1,116 @@
+.footer-section {
+  background-color: #1c1c2c;
+  color: #fff;
+  font-size: 15px;
+  border-top: 1px solid #2c2c3a;
+}
+
+.footer-logo {
+  height: 80px;
+}
+
+.footer-heading {
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li {
+  margin-bottom: 8px;
+}
+
+.footer-list a {
+  text-decoration: none;
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.footer-list a:hover {
+  color: #1a73e8;
+}
+
+/* ---------------------------- */
+/* 🔹 GLOBAL RESPONSIVENESS */
+/* ---------------------------- */
+
+@media (max-width: 768px) {
+  /* Header spacing fix if needed */
+  .custom-carousel {
+    margin-top: 60px;
+  }
+
+  /* Hero image: adapt height */
+  .hero-img {
+    height: auto;
+  }
+
+  /* Company profile section */
+  .company-profile p,
+  .company-profile ul {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Destination cards (swiper) */
+  .destination-card img {
+    height: 250px;
+  }
+
+  /* Swiper buttons: move inside */
+  .swiper-button-prev-custom,
+  .swiper-button-next-custom {
+    top: 92%;
+    font-size: 22px;
+    padding: 8px 12px;
+  }
+
+  .swiper-button-prev-custom {
+    left: 20px;
+  }
+
+  .swiper-button-next-custom {
+    right: 20px;
+  }
+
+  /* Why Choose Falcon cards */
+  .why-card {
+    padding: 1.5rem 1rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* About Us adjustments */
+  .about-text {
+    text-align: center;
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* Footer layout stack */
+  .footer-section .row {
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+
+  .footer-list li {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section .row {
+    text-align: center;
+  }
+  .footer-logo {
+    margin: 0 auto 1rem;
+  }
+}
