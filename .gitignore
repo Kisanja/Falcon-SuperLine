@@ -1,0 +1,12 @@
+# Node modules
+backend/node_modules/
+frontend/node_modules/
+node_modules/
+
+# Env / secrets
+backend/.env
+frontend/.env
+.env
+
+# Uploaded files (if you don’t want them in GitHub)
+backend/uploads/
