@@ -1,5 +1,6 @@
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import EmployeeRegister from './HR/EmployeeRegister';
 import AddBus from './BUS/AddBus';
 import AddRoute from './BUS/AddRoute';
@@ -22,12 +23,25 @@ import PaymentPage from './Customer/PaymentPage';
 import MyBooking from './Customer/MyBooking';
 import Support from './Customer/Support';
 import CustomerProtectedRoute from './Customer/CustomerProtectedRoute';
+import Loader from './Loader/Loader';
 
-function App() {
+const AppContent = () => {
+  const location = useLocation();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 600); // Delay can be adjusted as needed
+
+    return () => clearTimeout(timeout);
+  }, [location]);
+
   return (
-    <Router>
+    <>
+      {loading && <Loader />}
       <Routes>
-
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
@@ -86,8 +100,15 @@ function App() {
             </CustomerProtectedRoute>
           }
         />
-
       </Routes>
+    </>
+  );
+};
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
     </Router>
   );
 }
